@@ -1,0 +1,14 @@
+@import './reset.css';
+@import './base.css';
+@import './utils.scss';
+
+body {
+  display: flex;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  font-weight: normal;
+}
