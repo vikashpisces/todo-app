@@ -1,5 +1,5 @@
 <template>
-  <app-button @click="handleClick"> Add a Todo </app-button>
+  <app-button @click="handleClick" data-test="new-todo-button"> Add a Todo </app-button>
 </template>
 
 <script setup lang="ts">

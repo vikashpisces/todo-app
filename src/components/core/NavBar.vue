@@ -4,6 +4,9 @@
     <ul class="nav-bar__menu">
       <li class="nav-bar__menu-item"><router-link to="/">Home</router-link></li>
       <li class="nav-bar__menu-item"><router-link to="/todos">Todo</router-link></li>
+      <li class="nav-bar__menu-item">
+        <router-link to="/Ping%20Identity%20Frontend%20Coding%20Exercise.pdf">Doc</router-link>
+      </li>
     </ul>
   </nav>
 </template>
