@@ -4,23 +4,37 @@
       <h2>{{ formTitle }}</h2>
       <AppButton type="transparent" class="ml-auto close-btn" @click="handleClose">x</AppButton>
     </div>
-    <form @submit.prevent="handleSubmit" ref="todoFormRef">
+    <form @submit.prevent="handleSubmit" ref="todoFormRef" data-test="new-todo-form">
       <div class="form-group">
         <label>Title</label>
-        <input type="text" v-model="formData.title" placeholder="Enter Todo Title" />
+        <input
+          class="todo-title"
+          type="text"
+          v-model="formData.title"
+          placeholder="Enter Todo Title"
+        />
       </div>
       <div class="form-group">
         <label>Description</label>
-        <textarea v-model="formData.description" placeholder="Enter Todo Description (Optional)" />
+        <textarea
+          class="todo-description"
+          v-model="formData.description"
+          placeholder="Enter Todo Description (Optional)"
+        />
       </div>
       <div class="form-group">
         <label>Priority</label>
-        <select v-model="formData.priority" placeholder="Select a Priority" ref="prioritySelection">
+        <select
+          class="todo-priority"
+          v-model="formData.priority"
+          placeholder="Select a Priority"
+          ref="prioritySelection"
+        >
           <option v-for="opt in priorityList" :key="opt" :value="opt">{{ opt }}</option>
         </select>
       </div>
       <div class="form-group flex item-center mb-4">
-        <AppButton type="submit">{{ submitButtonText }}</AppButton>
+        <AppButton type="submit" class="submit-btn">{{ submitButtonText }}</AppButton>
         <AppButton type="text" prevent class="ml-auto" @click="handleReset">Reset</AppButton>
       </div>
     </form>

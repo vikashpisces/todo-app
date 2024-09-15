@@ -1,7 +1,9 @@
 <template>
   <main class="flex flex-col item-center h-full w-full">
     <h2 class="mb-4">Welcome to the Todo App</h2>
-    <RouterLink to="/todos"><AppButton>Go to Todo Page</AppButton></RouterLink>
+    <RouterLink to="/todos"
+      ><AppButton data-test="goto-todo-page">Go to Todo Page</AppButton></RouterLink
+    >
   </main>
 </template>
 
